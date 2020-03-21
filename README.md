@@ -1,4 +1,4 @@
-# Accelerated MM Algorithms for Ranking Score Inference from Comparison Data
+# Accelerated MM Algorithms for Bradley-Terry Models
 
 This repository contains code and datasets for numerical experiments for MM and Accelerated MM algorithms for generalized Bradley-Terry models, which include classic Bradley-Terry model of paired comparisons, Rao-Kupper model of paired comparison models that allow for tie outcomes, Luce choice model, and Plackett-Luce ranking model. 
 
