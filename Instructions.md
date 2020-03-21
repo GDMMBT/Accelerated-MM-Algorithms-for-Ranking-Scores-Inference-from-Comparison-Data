@@ -58,7 +58,7 @@ dim(Bayesian.MM(init,tiny,alpha,beta,w)$Iterationmatrix)[1]
 #For AccMM case
 dim(Acc.Bayesian.MM(init,tiny,alpha,beta,w)$Iterationmatrix)[1]
 ```
-**Step 4**. Repeat the experiment for beta=0.01, 0.1, 1, 10 respectively and then record the number of iterations for each pair of alpha and beta. Note that, for MM case, when beta=0, it will return the MLE (Maximum Likelihood Estimator), which doesn't exist for AccMM case.
+**Step 4**. Repeat the experiment for beta=0.01, 0.1, 1, 10 respectively and then record the number of iterations for each pair of alpha and beta.
 
 ##### Sample dataset <a name="btsampledataset"></a>
 
@@ -67,7 +67,7 @@ dim(Acc.Bayesian.MM(init,tiny,alpha,beta,w)$Iterationmatrix)[1]
 **Step 2**. In 'construct_strong_connected_graph.R', we can compute the winning matrix ('w0') and the comparison matrix ('AA'); this also 
 computes 'd(M)' (m.max) and 'a(M)' (second smallest eigenvalue) for the sample graph.
 
-**Step 3**. Follow **step 2, 3 and 4** from [Full dataset](#btfulldataset) to compute the number of interations for each pair of alpha and beta.
+**Step 3**. Follow **step 2, 3 and 4** from [Full dataset](#btfulldataset) to compute the number of interations for each pair of alpha and beta. Note that, for AccMM case, as \beta approaches 0 from above, the convergence time bound corresponds to that of the MM algorithm for ML estimation when \beta=0.
 
 
 ## Rao-Kupper model - Chess dataset <a name="rk"></a>
@@ -102,7 +102,7 @@ dim(Bayesian.MM(init,tiny,alpha,beta,s,c)$Iterationmatrix)[1]
 #For AccMM case
 dim(Acc.Bayesian.MM(init,tiny,alpha,beta,s,c)$Iterationmatrix)[1]
 ```
-**Step 4**. Repeat the experiment for beta=0.01, 0.1, 1, 10 respectively and then record the number of iterations for each pair of alpha and beta. Note that, for MM case, when beta=0, it will return the MLE (Maximum Likelihood Estimator), which doesn't exist for AccMM case.
+**Step 4**. Repeat the experiment for beta=0.01, 0.1, 1, 10 respectively and then record the number of iterations for each pair of alpha and beta.
 
 ##### Sample dataset <a name="rksampledataset"></a>
 
@@ -111,7 +111,7 @@ dim(Acc.Bayesian.MM(init,tiny,alpha,beta,s,c)$Iterationmatrix)[1]
 **Step 2**. In 'construct_strong_connected_graph.R', we can compute the winning matrix ('s0') and the comparison matrix ('AA'); this also 
 computes 'd(M)' (m.max) and 'a(M)' (second smallest eigenvalue) for the sample graph.
 
-**Step 3**. Follow **step 2, 3 and 4** from [Full dataset](#rkfulldataset) to compute the number of interations for each pair of alpha and beta.
+**Step 3**. Follow **step 2, 3 and 4** from [Full dataset](#rkfulldataset) to compute the number of interations for each pair of alpha and beta. Note that, for AccMM case, as \beta approaches 0 from above, the convergence time bound corresponds to that of the MM algorithm for ML estimation when \beta=0.
 
 
 ## Plackett-Luce model - NASCAR dataset <a name="pl"></a>
@@ -143,5 +143,5 @@ dim(Bayesian.MM(init,tiny,alpha,beta,playersmatrix,n)$Iterationmatrix)[1]
 #For AccMM case
 dim(Acc.Bayesian.MM(init,tiny,alpha,beta,playersmatrix,n)$Iterationmatrix)[1]
 ```
-**Step 4**. Repeat the experiment for beta=0.01, 0.1, 1, 10 respectively and then record the number of iterations for each pair of alpha and beta. Note that, for MM case, when beta=0, it will return the MLE (Maximum Likelihood Estimator), which doesn't exist for AccMM case.
+**Step 4**. Repeat the experiment for beta=0.01, 0.1, 1, 10 respectively and then record the number of iterations for each pair of alpha and beta. Note that, for AccMM case, as \beta approaches 0 from above, the convergence time bound corresponds to that of the MM algorithm for ML estimation when \beta=0.
 
