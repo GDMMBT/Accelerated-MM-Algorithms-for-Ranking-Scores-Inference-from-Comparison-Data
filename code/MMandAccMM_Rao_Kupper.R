@@ -55,8 +55,8 @@ Acc.Bayesian.MM=function(init,tiny,alpha,beta,s,c){
     }
     c1=log(n*(alpha-1)/beta)-log(sum(exp(x1)))
     x1=x1+c1
-    i=i+1
-    iterationmatrix[i,]=x1
+    t=t+1
+    iterationmatrix[t,]=x1
   }
   iterationmatrix=iterationmatrix[1:t,1:n]
   return(list(Iterationmatrix=iterationmatrix))
