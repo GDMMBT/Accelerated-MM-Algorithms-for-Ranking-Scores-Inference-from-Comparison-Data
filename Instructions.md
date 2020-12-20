@@ -70,7 +70,7 @@ computes 'd(M)' (m.max) and 'a(M)' (second smallest eigenvalue) for the sample g
 
 **Step 3**. Follow **step 2, 3 and 4** from [Full dataset](#btfulldataset) to compute the number of interations for each pair of alpha and beta. Note that, for AccMM case, as \beta approaches 0 from above, the convergence time bound corresponds to that of the MM algorithm for ML estimation when \beta=0.
 
-###### MM Algorithm with normalisation such that $\sum_{i=1}^n\exp(w_i)=1$
+###### MM Algorithm with normalisation such that ```math \sum_{i=1}^n\exp(w_i)=1```
 
 **Step 1**. Follow **step 1, 2** from [Sample dataset](#btsampledataset) to compute the input data.
 
