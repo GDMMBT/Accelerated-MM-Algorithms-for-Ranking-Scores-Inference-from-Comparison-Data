@@ -29,6 +29,7 @@ This dataset contains auto racing competition results. The source of this datase
 * [GIFGIF](http://lucas.maystre.ch/gifgif-data) dataset contains outcomes for 17 different metrics (happiness, pride, fear, amusement, contempt, ...)
 * In our experiments, we used three metrics (amusement, contempt, and happines)
 * The experiments are conducted by using full dataset for the three metrics, and using a sample from the strongly connected coponent.
+* For the sample datasets, we also include the experiment for MM algorithm with normalisation at each iterations such that \sum_{i=1}^n\exp(w_i)=1.
 
 #### Step-by-step instructions:
 
@@ -69,6 +70,24 @@ computes 'd(M)' (m.max) and 'a(M)' (second smallest eigenvalue) for the sample g
 
 **Step 3**. Follow **step 2, 3 and 4** from [Full dataset](#btfulldataset) to compute the number of interations for each pair of alpha and beta. Note that, for AccMM case, as \beta approaches 0 from above, the convergence time bound corresponds to that of the MM algorithm for ML estimation when \beta=0.
 
+###### MM Algorithm with normalisation such that \sum_{i=1}^n\exp(w_i)=1
+
+**Step 1**. Follow **step 1, 2** from [Sample dataset](#btsampledataset) to compute the input data.
+
+**Step 2**. In 'MMbtNorm.R', we can compute the number of iterations until eps-convergence for MM algorithm with normalisation. 
+We use function
+
+```r
+Bayesian.MM.Norm=function(init,tiny,alpha,beta,w)
+```
+
+**Step 3**. For function Bayesian.MM.Norm, 'init' is the initial vector value of parameters, 'tiny' is eps. 'w' is the winning matrix that we computed from 'read_GIFGIF_data.R'. Each of these function will return a matrix called ('Iterationmatrix'). Iterationmatrix(i,j) is the updated parameter value for j-th node at the i-th iteration. The total number of iterations until eps-convergence can be obtained for both MM and AccMM case using the following code
+
+```r
+dim(Bayesian.MM.Norm(init,tiny,alpha,beta,w)$Iterationmatrix)[1]
+```
+
+**Step 4**. Repeat the experiment for beta=0.01, 0.1, 1, 10 respectively and then record the number of iterations for each pair of alpha and beta.
 
 ## Rao-Kupper model - Chess dataset <a name="rk"></a>
 
