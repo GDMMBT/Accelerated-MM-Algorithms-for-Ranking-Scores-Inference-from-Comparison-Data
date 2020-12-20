@@ -81,7 +81,7 @@ We use function
 Bayesian.MM.Norm(init,tiny,alpha,beta,w)
 ```
 
-**Step 3**. For function Bayesian.MM.Norm, 'init' is the initial vector value of parameters, 'tiny' is eps. 'w' is the winning matrix that we computed from 'read_GIFGIF_data.R'. Each of these function will return a matrix called ('Iterationmatrix'). Iterationmatrix(i,j) is the updated parameter value for j-th node at the i-th iteration. The total number of iterations until eps-convergence can be obtained for both MM and AccMM case using the following code
+**Step 3**. For function Bayesian.MM.Norm, 'init' is the initial vector value of parameters, 'tiny' is eps. 'w' is the winning matrix that we computed from 'read_GIFGIF_data.R'. Each of these function will return a matrix called ('Iterationmatrix'). Iterationmatrix(i,j) is the updated parameter value for j-th node at the i-th iteration. The total number of iterations until eps-convergence can be obtained using the following code
 
 ```r
 dim(Bayesian.MM.Norm(init,tiny,alpha,beta,w)$Iterationmatrix)[1]
