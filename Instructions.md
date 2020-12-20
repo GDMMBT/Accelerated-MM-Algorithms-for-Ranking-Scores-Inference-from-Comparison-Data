@@ -29,7 +29,7 @@ This dataset contains auto racing competition results. The source of this datase
 * [GIFGIF](http://lucas.maystre.ch/gifgif-data) dataset contains outcomes for 17 different metrics (happiness, pride, fear, amusement, contempt, ...)
 * In our experiments, we used three metrics (amusement, contempt, and happines)
 * The experiments are conducted by using full dataset for the three metrics, and using a sample from the strongly connected coponent.
-* For the sample datasets, we also include the experiment for MM algorithm with normalisation at each iterations such that \sum_{i=1}^n\exp(w_i)=1.
+* For the sample datasets, we include the experiment for MM algorithm with normalisation at each iterations such that \sum_{i=1}^n\exp(w_i)=1.
 
 #### Step-by-step instructions:
 
