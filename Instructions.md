@@ -70,7 +70,7 @@ computes 'd(M)' (m.max) and 'a(M)' (second smallest eigenvalue) for the sample g
 
 **Step 3**. Follow **step 2, 3 and 4** from [Full dataset](#btfulldataset) to compute the number of interations for each pair of alpha and beta. Note that, for AccMM case, as \beta approaches 0 from above, the convergence time bound corresponds to that of the MM algorithm for ML estimation when \beta=0.
 
-###### MM Algorithm with normalisation such that \sum_{i=1}^n\exp(w_i)=1
+###### MM Algorithm with normalisation such that \sum_{i=1}^n\exp(w_i)=1 at each step
 
 **Step 1**. Follow **step 1, 2** from [Sample dataset](#btsampledataset) to compute the input data.
 
@@ -78,7 +78,7 @@ computes 'd(M)' (m.max) and 'a(M)' (second smallest eigenvalue) for the sample g
 We use function
 
 ```r
-Bayesian.MM.Norm=function(init,tiny,alpha,beta,w)
+Bayesian.MM.Norm(init,tiny,alpha,beta,w)
 ```
 
 **Step 3**. For function Bayesian.MM.Norm, 'init' is the initial vector value of parameters, 'tiny' is eps. 'w' is the winning matrix that we computed from 'read_GIFGIF_data.R'. Each of these function will return a matrix called ('Iterationmatrix'). Iterationmatrix(i,j) is the updated parameter value for j-th node at the i-th iteration. The total number of iterations until eps-convergence can be obtained for both MM and AccMM case using the following code
